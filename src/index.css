@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --primary: #0aeafa;
+    --light: #d3e0e3;
+    --dark: #050621;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--dark);
+    color: var(--primary);
+}
+
+.card {
+    border: 1px solid var(--light);
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.title {
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.subtitle {
+    color: var(--light);
+    font-size: xx-large;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content {
+    color: var(--light);
+    font-size: xx-large;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content > span {
+    color: var(--primary);
+}
+
+.content.secret {
+    margin-bottom: 0;
+}
+
+.button {
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: var(--dark);
+    color: var(--primary);
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.button.secret {
+    min-width: 180px;
+}
+
+.list {
+    list-style: disc;
+    margin: 0;
+}
+
+.item {
+    font-size: xx-large;
 }
